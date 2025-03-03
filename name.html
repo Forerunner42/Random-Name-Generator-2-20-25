@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logan Moreno - Random Name Generator</title>
+    <style>
+        *,
+        *::before,
+        *::after{
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: beige;
+            padding:30px;
+        }
+
+        .container{
+            margin:0 auto;
+            padding:20px;
+            text-align:center;
+            background-color: whitesmoke;
+            max-width: 600px;
+            border:2px solid black;
+            border-radius: 20px;
+        }
+
+        button{
+            font-size: 18px;
+            margin:10px;
+            font-weight: bold;
+            border-radius: 10px;
+            background-color: gray;
+            color:lightskyblue;
+        }
+
+        h2{
+            color:darkblue;
+        }
+
+        .flex{
+            display:flex;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Name Generator</h1>
+
+        <div> <!-- Roll All -- Disable Middle Name -->
+            <button onclick="rollAll()">Roll All</button>
+
+            <button onclick="toggleMid()" id="toggle">Disable Middle Name</button>
+        </div>
+
+        <div> <!-- First Name -- Last Name -->
+            <button onclick="rollA()">Roll First Name</button>
+
+            <button onclick="rollC()">Roll Last Name</button>
+        </div>
+
+        <div> <!-- Middle Name-->
+            <button onclick="rollB()" id="middle">Roll Middle Name</button>
+        </div>
+
+        <div> <!-- Display Text -->
+            <h4>Your Name is. . .</h4>
+        </div>
+
+        <div class="flex"> <!-- Display Divs -->
+            <h2 id="firstName"></h2>
+            <h2 id="middleName"></h2>
+            <h2 id="lastName"></h2>
+        </div>
+    </div>
+
+
+    <script src="name.js"></script>
+</body>
+</html>
